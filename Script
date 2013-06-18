@@ -1,0 +1,38 @@
+function user(username,points)
+{
+this.username=username;
+this.points=points;
+
+this.changePoints=changePoints;
+function changePoints(num)
+{
+this.points+=num;
+}
+
+
+}
+
+var person1=new user("Amy",0);
+
+var person2=new user("Tyler",0);
+
+
+
+var users=new Array();
+users[0]=person1;
+users[1]=person2;
+
+
+
+if(localStorage.users){
+  			//localStorage simulates server database
+				users = JSON.parse(localStorage.users);
+			}
+
+var name="default";
+
+if(localStorage.name){
+				//localStorage simulates server database
+				name = JSON.parse(localStorage.name);
+			}
+
