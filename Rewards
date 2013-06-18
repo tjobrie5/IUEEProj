@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <h1 style="font-family:verdana; font-size:50px"> Rewards</h1>
+
+  <meta charset="utf-8" />
+	<title>Friends Spot</title>
+
+	<form action="/html/tags/html_form_tag_action.cfm" method="post">
+
+
+<style type="text/css">
+
+
+
+body
+{
+
+background-image:url('background.jpg');
+
+}
+
+
+#navigation 
+{
+	padding:10px 0px;
+	width:175px;
+}
+
+
+#navigation a 
+{
+	background:#BCF5A9;
+	display:block;
+	height:150px;
+	text-indent: 0px;
+}
+
+
+
+
+#navigation a{
+text-decoration: none; 
+font-family: Verdana, 
+sans-serif; 
+color:#088A08;
+text-align:center;
+}
+
+#navigation a.link1:hover {background-position:-146px 0px;}
+#navigation a.link2 {background-position:0px -47px;}
+#navigation a.link2:hover {background-position:-146px -47px;}
+#navigation a.link3 {background-position:0px -94px;}
+#navigation a.link3:hover{background-position:-146px -94px;}
+#navigation a.link4 {background-position:0px -141px;}
+#navigation a.link4:hover {background-position:-146px -141px;}
+#navigation a.link5 {background-position:0px -188px;}
+#navigation a.link5:hover {background-position:-146px -188px;}
+#navigation a.link6 {background-position:0px -235px;}
+#navigation a.link6:hover {background-position:-146px -235px;}
+#navigation a.link7 {background-position:0px -282px;}
+#navigation a.link7:hover {background-position:-146px -282px;}
+#navigation a.link8 {background-position:0px -329px;}
+#navigation a.link8:hover {background-position:-146px -329px;}
+#navigation a.link9 {background-position:0px -375px; height:65px;}
+#navigation a.link9:hover {background-position:-146px -375px;}
+
+
+#page{
+	position:absolute;
+	background-color:#64FE2E;
+	width:600px;
+	height:750px;
+	left:50%;
+	margin-left:-200px;
+	top: 135px;
+	}
+
+</style>
+
+</head>
+<body>
+
+<div id="page"
+<center>
+<button onclick="reward()"> rewards</button>
+
+<script src="File.js"></script>
+<script>
+localStorage.users = JSON.stringify(users);
+
+        console.log(localStorage);
+
+var indexRewards;
+for(var i=0;i<users.length;i++)
+{
+if(users[i].username==name)
+{
+indexRewards=i;
+}
+}
+document.write("Username: "+users[indexRewards].username+"Points"+users[indexRewards].points);
+function reward()
+{
+if(users[indexRewards].points>2)
+{
+alert("before");
+window.open("http://www.tasteofhome.com/Recipes/Ingredients/Chicken-Recipes");
+alert("hello");
+}
+}
+</script>
+<ul id="navigation">
+<li><a href="healthfeed.html" class="link1">Health Feed</a></li> 
+<li><a href="rewards.html" class="link2">Rewards</a></li>
+<li><a href="myspot.html" class="link3">My Spot</a></li>
+<li><a href="friends.html" class="link4">Friends Spot</a></li>
+</ul>
+
+<br/> 
+
+
+
+
+
+  <script type="text/javascript" src="http://static.firebase.com/demo/firebase.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://www.firebase.com/css/example.css">
+
+<body>
+ 
+
+
+<!-- END OF CENTER COLUMN */ -->
+
+<script src="File.js"></script>
+
+
+
+
+</html>
+
