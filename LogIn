@@ -14,7 +14,7 @@
                     <label for="username" class="uname"> Your email or username </label>
                     <input id="username" name="username" type="text" placeholder="myusername or mymail@mail.com"/>
                 </p>
-  	
+    
                 <p> 
                     <label for="password" class="youpasswd"> Your password </label>
                     <input id="password" name="password" type="password" placeholder="eg. X8df!90EO" /> 
@@ -24,14 +24,10 @@
                     <label for="loginkeeping">Keep me logged in</label>
                 </p>
 
-		<p>
-		<button onclick="store()">Submit</button>
-		</p>
+        <p>
+        <button onclick="store()">Submit</button>
+        </p>
 
-                <pclass="change_link"> 
-			<a href="newhomepage.html" class="to_register">Log in</a>
-                </p>
-		
                 <p class="change_link">
                     Not a member yet ?
                     <a href="signup.html" class="to_register">Join us</a>
@@ -321,16 +317,17 @@ p.signin.button{
  var name="default";
 
 if(localStorage.name){
-				//localStorage simulates server database
-				name = JSON.parse(localStorage.name);
-			}
+                //localStorage simulates server database
+                name = JSON.parse(localStorage.name);
+            }
 
 function store(){
 
 var name=document.getElementById('username').value;
-				localStorage.name = JSON.stringify(name);
+                localStorage.name = JSON.stringify(name);
 
-				console.log(localStorage);
+                console.log(localStorage);
+window.location = "FoodSpot.html"    
 
 }
 
