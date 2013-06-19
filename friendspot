@@ -108,7 +108,7 @@ document.writeln("Points: " +users[i].points + "<br />");
 
 </script>
 
-<img src="friends.jpg"  alt= "Stay Focused!" width="400" hieght="450">
+
 <img src="healthyfood.jpg"  alt= "Stay Focused!" width="400" hieght="450">
 
   
