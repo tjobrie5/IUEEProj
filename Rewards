@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -6,19 +7,20 @@
 
   <h1 style="font-family:verdana; font-size:50px"> Rewards</h1>
 
-  <meta charset="utf-8" />
-	<title>Rewards</title>
+	<meta charset="utf-8" />
+	<title>Friends Spot</title>
 
-	<form action="/html/tags/html_form_tag_action.cfm" method="post">
+	<form action="rewardsnew.html" method="post">
 
 
 <style type="text/css">
 
 
+
 body
 {
 
-background-image:url('backgroundO.jpg');
+background-image:url('background.jpg');
 
 }
 
@@ -32,7 +34,7 @@ background-image:url('backgroundO.jpg');
 
 #navigation a 
 {
-	background:#FFFFCC;
+	background:#BCF5A9;
 	display:block;
 	height:150px;
 	text-indent: 0px;
@@ -40,11 +42,12 @@ background-image:url('backgroundO.jpg');
 
 
 
+
 #navigation a{
 text-decoration: none; 
 font-family: Verdana, 
 sans-serif; 
-color:#FF0000;
+color:#088A08;
 text-align:center;
 }
 
@@ -67,34 +70,29 @@ text-align:center;
 #navigation a.link9:hover {background-position:-146px -375px;}
 
 
-
-
 #page{
 	position:absolute;
-	background-color:#FFFFCC;
+	background-color:#64FE2E;
 	width:600px;
 	height:750px;
 	left:50%;
 	margin-left:-200px;
 	top: 135px;
 	}
- 
+
 </style>
 
 </head>
 <body>
 
-<ul id="navigation">
-<li><a href="healthfeed.html" class="link1">Health Feed</a></li>
-<li><a href="rewards.html" class="link2">Rewards</a></li>
-<li><a href="myspot.html" class="link3">My Spot</a></li>
-<li><a href="friends.html" class="link4">Friends Spot</a></li>
-</ul>
-
-<br/> 
-
-<div id="page">
+<div id="page"
 <center>
+<button onclick="reward1()"> 2 Points</button>
+<button onclick="reward2()"> 10 Points</button>
+<button onclick="reward3()"> 25 Points</button>
+<button onclick="reward4()"> 50 Points</button>
+<button onclick="reward5()"> 75 Points</button>
+<button onclick="reward6()"> 100 Points</button>
 
 
 <script src="script.js"></script>
@@ -166,14 +164,33 @@ window.open("http://www.mayoclinic.com/health/healthy-recipes/NU00433");
 
 
 </script>
+<ul id="navigation">
+<li><a href="newhomepage.html" class="link1">Health Feed</a></li> 
+<li><a href="rewards.html" class="link2">Rewards</a></li>
+<li><a href="myspot.html" class="link3">My Spot</a></li>
+<li><a href="friends.html" class="link4">Friends Spot</a></li>
+</ul>
+
+<br/> 
 
 
 
-  
-
-<script src="File.js"></script>
 
 
+  <script type="text/javascript" src="http://static.firebase.com/demo/firebase.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://www.firebase.com/css/example.css">
+
+<body>
+ 
+
+
+<!-- END OF CENTER COLUMN */ -->
+
+//<script src="File.js"></script>
+
+</script>
 
 
 </html>
+
