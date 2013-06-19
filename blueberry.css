@@ -22,7 +22,9 @@
 .blueberry { margin: 0 auto; }
 .blueberry .slides {
   display: block;
-  position: relative;
+	position: absolute;
+	margin-left: 100px;
+	margin-top: 100px;
 	overflow: hidden;
 }
 .blueberry .slides li {
@@ -33,7 +35,7 @@
 }
 .blueberry .slides li img {
 	display: block;
-	width: 100%;
+	width: 75%;
 	max-width: none;
 }
 .blueberry .slides li.active { display: block; position: relative; }
