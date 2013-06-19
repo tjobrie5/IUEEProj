@@ -18,7 +18,7 @@
 body
 {
 
-background-image:url('green.jpg');
+background-image:url('backgroundorange.jpg');
 
 }
 
@@ -32,7 +32,7 @@ background-image:url('green.jpg');
 
 #navigation a 
 {
-	background:#000000;
+	background:#FFFFCC;
 	display:block;
 	height:150px;
 	text-indent: 0px;
@@ -44,7 +44,7 @@ background-image:url('green.jpg');
 text-decoration: none; 
 font-family: Verdana, 
 sans-serif; 
-color:#008000;
+color:#FF0000;
 text-align:center;
 }
 
@@ -71,7 +71,7 @@ text-align:center;
 
 #page{
 	position:absolute;
-	background-color:##008000;
+	background-color:#FFFFCC;
 	width:600px;
 	height:750px;
 	left:50%;
@@ -91,7 +91,7 @@ text-align:center;
 <li><a href="friends.html" class="link4">Friends Spot</a></li>
 </ul>
 
-<br/> 
+
 
 <div id="page">
 <center>
@@ -102,8 +102,9 @@ alert(JSON.stringify(users));
 
 for(var i=0; i<users.length;i++){
 document.writeln("Username: " + users[i].username);
-document.writeln("Points: " +users[i].points);
+document.writeln("Points: " +users[i].points + "<br />");
 }
+
 
 </script>
 
