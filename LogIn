@@ -350,7 +350,7 @@ var name=document.getElementById('username').value;
                 localStorage.name = JSON.stringify(name);
 
                 console.log(localStorage);
-window.location = "FoodSpot.html"    
+window.location = "FoodSpot.html";    
 
 }
 
