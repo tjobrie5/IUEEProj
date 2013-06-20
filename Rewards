@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 
 <html>
@@ -50,7 +48,7 @@ sans-serif;
 color:#FF0000;
 text-align:center;
 }
-
+/*
 #navigation a.link1:hover {background-position:-146px 0px;}
 #navigation a.link2 {background-position:0px -47px;}
 #navigation a.link2:hover {background-position:-146px -47px;}
@@ -68,7 +66,15 @@ text-align:center;
 #navigation a.link8:hover {background-position:-146px -329px;}
 #navigation a.link9 {background-position:0px -375px; height:65px;}
 #navigation a.link9:hover {background-position:-146px -375px;}
+*/
 
+#login{
+	position:absolute;
+	margin-left: 80%;
+	top:10px;
+	font-family: verdana;
+	font-size: 12pt;
+}
 
 
 
@@ -105,6 +111,16 @@ text-align:center;
 </ul>
 
 <br/> 
+
+<ul id="login">
+	<script>
+	var x=localStorage.getItem('name');
+	var z=x.substring(1,x.length-1);
+	document.write("Currently logged in as: "+z);
+	</script>
+	<br />
+	<input type="button" onclick="signout()" value="Sign Out"></input>
+</ul>
 
 <div id="page">
 <center>
@@ -205,6 +221,10 @@ else
 alert("Sorry, you don't have enough points!");
 }
 
+function signout()
+{
+	window.location = "LoginNew.html";
+}
 
 
 </script>
@@ -219,3 +239,4 @@ alert("Sorry, you don't have enough points!");
 
 
 </html>
+
