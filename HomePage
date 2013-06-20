@@ -3,17 +3,18 @@
 <html>
 
 <head>
-	<h1 style="font-family:verdana; font-size:50px"> FoodSpot</h1>
+
+  <h1 style="font-family:verdana; font-size:50px"> Rewards</h1>
 
 	<meta charset="utf-8" />
-	<title>FoodSpot</title>
+	<title>Friends Spot</title>
 
-
-
-
+	<form action="rewardsnew.html" method="post">
 
 
 <style type="text/css">
+
+
 
 body
 {
@@ -32,7 +33,7 @@ background-image:url('background.jpg');
 
 #navigation a 
 {
-	background:#FFFFCC;
+	background:#BCF5A9;
 	display:block;
 	height:150px;
 	text-indent: 0px;
@@ -40,14 +41,15 @@ background-image:url('background.jpg');
 
 
 
+
 #navigation a{
 text-decoration: none; 
 font-family: Verdana, 
 sans-serif; 
-color:#FF0000;
+color:#088A08;
 text-align:center;
 }
-/*
+
 #navigation a.link1:hover {background-position:-146px 0px;}
 #navigation a.link2 {background-position:0px -47px;}
 #navigation a.link2:hover {background-position:-146px -47px;}
@@ -65,13 +67,13 @@ text-align:center;
 #navigation a.link8:hover {background-position:-146px -329px;}
 #navigation a.link9 {background-position:0px -375px; height:65px;}
 #navigation a.link9:hover {background-position:-146px -375px;}
-*/
+
 
 #page{
 	position:absolute;
-	background-color:#FFFFCC;
+	background-color:#64FE2E;
 	width:600px;
-	height:1250px;
+	height:750px;
 	left:50%;
 	margin-left:-200px;
 	top: 135px;
@@ -81,93 +83,43 @@ text-align:center;
 	position:absolute;
 	margin-left: 80%;
 	top:10px;
-}
-
-
-img.postpic{
-	width:100%;
-}
-
-div.postArea{
-	width:450;
+	font-family: verdana;
+	font-size: 12pt;
 }
 
 
 </style>
 
-
 </head>
-
-
 <body>
+
 
 <ul id="login">
 	<script>
 	var x=localStorage.getItem('name');
 	var z=x.substring(1,x.length-1);
 	document.write("Currently logged in as: "+z);
+	
 	</script>
+	<input type="button" onclick="signout()" value="Sign Out"></input>
 </ul>
 
 
-<ul id="navigation">
-<li><a href="index.html" class="link1">Health Feed</a></li>
-<li><a href="rewardsnew.html" class="link2">Rewards</a></li>
-<li><a href="index.html" class="link3">My Spot</a></li>
-<li><a href="friendsspotnew.html" class="link4">Friends Spot</a></li>
-</ul>
-
-<div id="page">
+<div id="page"
 <center>
+<button onclick="reward1()"> 2 Points</button>
+<button onclick="reward2()"> 10 Points</button>
+<button onclick="reward3()"> 25 Points</button>
+<button onclick="reward4()"> 50 Points</button>
+<button onclick="reward5()"> 75 Points</button>
+<button onclick="reward6()"> 100 Points</button>
 
 
-
-<form>
-<br />
-<label for="file">Filename:</label>
-<input type="file" name="filename" id="file"><br>
-Comment
-<textarea name="comments" id="comments">
-</textarea><br />
-Picture Number
-<textarea name="pictureNumber" id="picture">
-</textarea><br />
-Rating (1-3)
-<textarea name="rating" id="rating">
-</textarea><br />
-
-
-Name of picture 
-<textarea name="pName" id="pName">
-</textarea><br />
-
-
-
-<button onclick="commentFunction()">Submit Comment</button>
-<button onclick="myFunction()">Upload Photo</button>
-<button onclick="localStorage.clear()"> Clear</button>
-<button onclick="reward()"> rewards</button>
-
-<br />
-<br />
-<br />
-
-
-<canvas id="myCanvas" width="300" height="1500"></canvas>
-</center>
-<script type="text/javascript" src="script.js"></script> 
+<script src="script.js"></script>
 <script>
-
-
-
-//var x=localStorage.getItem('name');
-//var z=x.substring(1,x.length-1);
-//document.write("Currently logged in as: "+z);
-
-
 localStorage.users = JSON.stringify(users);
 
-				console.log(localStorage);
+        console.log(localStorage);
 
 var indexRewards;
 for(var i=0;i<users.length;i++)
@@ -177,273 +129,91 @@ if(users[i].username==name)
 indexRewards=i;
 }
 }
-//document.write("Username: "+users[indexRewards].username+"Points"+users[indexRewards].points);
-function reward()
+
+
+document.writeln("<br />You currently have "+ users[indexRewards].points + " points.");
+function reward1()
 {
-if(users[indexRewards].points>2)
+if(users[indexRewards].points>=2)
 {
-//alert("before");
 window.open("http://www.tasteofhome.com/Recipes/Ingredients/Chicken-Recipes");
-//alert("hello");
 }
 }
-		
 
-
-var db=[];
-
-
-			if(localStorage.db){
-				//localStorage simulates server database
-				db = JSON.parse(localStorage.db);
-			}
-var commentsArray=[];
-
-if(localStorage.commentsArray){
-				//localStorage simulates server database
-				commentsArray= JSON.parse(localStorage.commentsArray);
-			}
-
-var uploadName=[];
-
-if(localStorage.uploadName){
-				//localStorage simulates server database
-				uploadName= JSON.parse(localStorage.uploadName);
-			}
-
-function myFunction()
+function reward2()
 {
-var filename=document.getElementById('file').value;
-filenew=filename.substring(12);
-
-				var photo = filenew
-
-
-				db[db.length] = photo;
-
-				localStorage.db = JSON.stringify(db);
-
-				console.log(localStorage);
-var userName=localStorage.getItem('name');
-userNamenew=userName.substring(1,userName.length-1);
-uploadName[uploadName.length]=userNamenew;
-localStorage.uploadName = JSON.stringify(uploadName);
-
-				console.log(localStorage);
-alert(uploadName[0]);
+if(users[indexRewards].points>=10)
+{
+window.open("http://www.fruitsandveggiesmorematters.org/30-minutes-or-less-recipe?iRID=1279");
+}
 }
 
- 
-
-for(var i=0;i<db.length;i++)
+function reward3()
 {
-
-var tt=document.getElementById("myCanvas");
-var txt=tt.getContext("2d");
-txt.moveTo(0,i*300);
-txt.lineTo(300,i*300);
-txt.stroke();
-
-
-var c=document.getElementById("myCanvas");
-var ctx=c.getContext("2d");
-
-ctx.font="20px Georgia";
-
-
-
-var num="Posted by: "+uploadName[i]+",  Picture: "+(i);
-ctx.fillText(num,20,20+i*300);
-
-
-var cx=document.getElementById("myCanvas");
-var ct=cx.getContext("2d");
-ct.moveTo(0,40+i*300);
-ct.lineTo(300,40+i*300);
-ct.stroke();
-
-var canvas=document.getElementById('myCanvas'); // grabs the canvas element
-		var context=canvas.getContext('2d'); // returns the 2d context object
-		var img=new Image() //creates a variable for a new image
-img.src= db[i]; // specifies the location of the imag
-
-		img.setAtX = 0;
-img.setAtY = 40+i*300;
-img.onload = function() {
-     context.drawImage(this, this.setAtX, this.setAtY,300,200);
-};
-
-var t=document.getElementById("myCanvas");
-var tx=t.getContext("2d");
-tx.moveTo(0,240+i*300);
-tx.lineTo(300,240+i*300);
-tx.stroke();
-
-
-
-	 };
-
-//localStorage.users = JSON.stringify(users);
-
-//				console.log(localStorage);
-function commentFunction(){
-var text=document.getElementById('comments').value;
-var picNum=document.getElementById('picture').value;
-
-
-var user1=[text,picNum];
-commentsArray[commentsArray.length]=user1;
-
-localStorage.commentsArray = JSON.stringify(commentsArray);
-
-				console.log(localStorage);
-
-var rating1=document.getElementById('rating').value;
-var cName=localStorage.getItem('name');
-cNameNew=cName.substring(1,cName.length-1);
-
-var pName=document.getElementById('pName').value;
-
-
-
-
-
-var indexOfCName=0;
-for(var i=0; i<users.length;i++)
+if(users[indexRewards].points>=25)
 {
-if(users[i].username==cNameNew)
-indexOfCName=i;
+window.open("http://www.fruitsandveggiesmorematters.org/30-minutes-or-less-recipe?iRID=1282");
+}
 }
 
-p1=parseInt(users[indexOfCName].points);
-
-users[indexOfCName].points=(p1+1)
-
-
-
-
-
-for(var i=0; i<users.length;i++)
+function reward4()
 {
-if(users[i].username==pName)
-indexOfPName=i;
+if(users[indexRewards].points>=50)
+{
+window.open("http://www.eatwellbewell.org/recipes/view/id/13?featured=1");
 }
-
-p2=parseInt(users[indexOfPName].points);
-alert(p2);
-p3=parseInt(rating1);
-users[indexOfPName].points=(p2+p3);
-localStorage.users = JSON.stringify(users);
-
-				console.log(localStorage);
 }
 
 
-
-
-
-
-for(var i=0;i<commentsArray.length;i++)
+function reward5()
 {
+if(users[indexRewards].points>=75)
+{
+window.open("http://www.fruitsandveggiesmorematters.org/30-minutes-or-less-recipe?iRID=1280");
+}
+}
 
+function reward6()
+{
+if(users[indexRewards].points>=100)
+{
+window.open("http://www.mayoclinic.com/health/healthy-recipes/NU00433");
+}
+}
 
-
-var c = document.getElementById("myCanvas");
-  var con = c.getContext("2d");
-  con.fillStyle = "blue";
-  con.font = "bold 16px Arial";
-  con.fillText(commentsArray[i][0], 0, 270+commentsArray[i][1]*300);
-
-
-
-
-
-};
-
-
-
+function signout()
+{
+	window.location = "LoginNew.html";
+}
 
 
 </script>
+<ul id="navigation">
+<li><a href="FoodSpot.html" class="link1">Health Feed</a></li>
+<li><a href="rewardsnew.html" class="link2">Rewards</a></li>
+<li><a href="index.html" class="link3">My Spot</a></li>
+<li><a href="friendsspotnew.html" class="link4">Friends Spot</a></li>
+</ul>
 
-</form>
-
-
-<!-- 
-<div id="page"> 
-<center>
-<h2 style:font-family:verdana; font-size:20px;>
-	Chicken Asparagus and Tomatoes Dinner!
-</h2>
-
-<img src="chicken.jpg" width="350" height="250">
-<br />
-<textarea name="comments" id="comments">
-</textarea><br />
-<input type="submit" value="Submit" />
-</center>
-
-<<style>
-
-.friend #friend-image {
-    border: 2px solid #F0F2F8;
-    display: inline-block;
-    float: left;
-    height: 85px;
-    width: 84px;
-}
-#main #friend #friend-bio {
-    float: left;
-    font-size: 14px;
-    margin: -7px 0 0 20px;
-    width: 454px;
-}
-#main #friend #friend-bio h4 {
-    font-size: 18px;
-    font-weight: normal;
-    margin: 0 0 5px;
-}
+<br/> 
 
 
-</style>
-
-<div class="postArea" id="postArea"></div>
-
-			<div id ='username' class="friend">
-
-				<img id ='friend-image' src='http://www.science2health.org/wp-content/uploads/2012/09/healthy-living-woman.jpg'>
-						<div id="friend-bio">
-							<h4> Andrew Roman</h4>
-							<p>Great food man!</p>
-						</div>
-		</div>
-		<br />
-		<div id ='username' class="friend">
-
-				<img id ='friend-image' src='http://4.bp.blogspot.com/-hGgD16bzJ0E/TiHsBW8q2MI/AAAAAAAABOA/TXt94JHsxX0/s1600/Funny+george+bush+1.jpg'>
-						<div id="friend-bio">
-							<h4> George W. Bush</h4>
-							<p>Food of MASS DESTRUCTION! </p>
-						</div>
-		</div>
-		<br />
-		<div id ='username' class="friend">
-
-				<img id ='friend-image' src='http://upload.wikimedia.org/wikipedia/commons/6/69/George_Foreman_2009.jpg'>
-						<div id="friend-bio">
-							<h4> Foreman Grillen</h4>
-							<p>Knock out meal son!! </p>
-						</div>
-		</div>
-		<br />
 
 
-</div> 
--->
-<!--
-<script src="File.js"></script>
-	-->	
+
+  <script type="text/javascript" src="http://static.firebase.com/demo/firebase.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://www.firebase.com/css/example.css">
 
 </body>
+ 
+
+
+<!-- END OF CENTER COLUMN */ -->
+
+//<script src="File.js"></script>
+
+</script>
+
 
 </html>
