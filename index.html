@@ -56,6 +56,13 @@ text-align:center;
 font-size:;
 }
 
+#login{
+	position:absolute;
+	margin-left: 80%;
+	top:10px;
+	font-family: verdana;
+	font-size: 12pt;
+}
 
 h1,h2,h3,h4,p { margin-bottom: 10px; }
 h1 {
@@ -115,6 +122,16 @@ $(window).load(function() {
 </head>
 <body>
 
+<ul id="login">
+	<script>
+
+	var x=localStorage.getItem('name');
+	var z=x.substring(1,x.length-1);
+	document.write("Currently logged in as: "+z);
+
+	</script>
+	<input type="button" onclick="signout()" value="Sign Out"></input>
+</ul>
 
 <!--
 <div id="header">
@@ -149,15 +166,20 @@ $(window).load(function() {
 </div>
 
 
-
+<script>
+function signout()
+{
+	window.location = "LoginNew.html";
+}
+</script>
 
 
 
 <ul id="navigation">
-<li><a href="index.html" class="link1">Health Feed</a></li>
-<li><a href="rewards.html" class="link2">Rewards</a></li>
-<li><a href="Friendsspot.html" class="link3">My Spot</a></li>
-<li><a href="friends.html" class="link4">Friends Spot</a></li>
+<li><a href="FoodSpot.html" class="link1">Health Feed</a></li>
+<li><a href="rewardsnew.html" class="link2">Rewards</a></li>
+<li><a href="index.html" class="link3">My Spot</a></li>
+<li><a href="friendsspotnew.html" class="link4">Friends Spot</a></li>
 </ul>
 
 
