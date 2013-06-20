@@ -48,6 +48,7 @@ color:#FF0000;
 text-align:center;
 }
 
+/*
 #navigation a.link1:hover {background-position:-146px 0px;}
 #navigation a.link2 {background-position:0px -47px;}
 #navigation a.link2:hover {background-position:-146px -47px;}
@@ -65,7 +66,7 @@ text-align:center;
 #navigation a.link8:hover {background-position:-146px -329px;}
 #navigation a.link9 {background-position:0px -375px; height:65px;}
 #navigation a.link9:hover {background-position:-146px -375px;}
-
+*/
 
 
 
@@ -79,16 +80,35 @@ text-align:center;
 	top: 135px;
 	}
  
+ #login{
+	position:absolute;
+	margin-left: 80%;
+	top:10px;
+	font-family: verdana;
+	font-size: 12pt;
+}
+
 </style>
 
 </head>
 <body>
 
+<ul id="login">
+	<script>
+	var x=localStorage.getItem('name');
+	var z=x.substring(1,x.length-1);
+	document.write("Currently logged in as: "+z);
+	
+	</script>
+
+	<input type="button" onclick="signout()" value="Sign Out"></input>
+</ul>
+
 <ul id="navigation">
-<li><a href="healthfeed.html" class="link1">Health Feed</a></li>
-<li><a href="rewards.html" class="link2">Rewards</a></li>
-<li><a href="myspot.html" class="link3">My Spot</a></li>
-<li><a href="friends.html" class="link4">Friends Spot</a></li>
+<li><a href="FoodSpot.html" class="link1">Health Feed</a></li>
+<li><a href="rewardsnew.html" class="link2">Rewards</a></li>
+<li><a href="index.html" class="link3">My Spot</a></li>
+<li><a href="friendsspotnew.html" class="link4">Friends Spot</a></li>
 </ul>
 
 
@@ -103,6 +123,11 @@ alert(JSON.stringify(users));
 for(var i=0; i<users.length;i++){
 document.writeln("Username: " + users[i].username);
 document.writeln("Points: " +users[i].points + "<br />");
+}
+
+function signout()
+{
+	window.location = "LoginNew.html";
 }
 
 
