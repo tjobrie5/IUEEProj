@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<button type="button">Sign Out</button>
-<a href="login.html" class="link1">Sign out</a>
-
-</head> 
-</html>
+<li><a href="login.html" class="link1">  
+<input type="button" value="Sign Out"></input> 
+</head>
+</html> 
