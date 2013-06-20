@@ -72,13 +72,6 @@
 
 
 
-div
-{
-background:url('backgroung.jpg');
-background-size:100% 100%;
-background-repeat:no-repeat;
-}
-
 
 
 
@@ -348,4 +341,16 @@ window.location = "FoodSpot.html"
 }
 
 </script>
+
+<body background="background.jpg">
+
+<style> 
+body { 
+background-repeat: no-repeat; //no tiling, or 
+-webkit-background-size: 190% 160%;
+} 
+</style>
+
+
+</body>
 </html>
